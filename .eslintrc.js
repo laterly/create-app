@@ -1,3 +1,3 @@
 module.exports = {
-  extends: [require.resolve('./packages/late-app/src')],
+  extends: [require.resolve("./packages/late-app/src/eslint")],
 };

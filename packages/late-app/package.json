@@ -16,7 +16,7 @@
   },
   "homepage": "https://github.com/laterly/latejs-app#readme",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "webpack --config ./webpack.config.js"
   },
   "files": [
     "bin",
@@ -60,9 +60,9 @@
     "cz-conventional-changelog-zh": "^0.0.2",
     "cz-customizable": "^6.9.0",
     "download-git-repo": "^3.0.2",
-    "eslint": "^7.32.0",
+    "eslint": "^8.43.0",
     "eslint-config-prettier": "^8.5.0",
-    "eslint-plugin-prettier": "^4.0.0",
+    "eslint-plugin-prettier": "^4.2.1",
     "eslint-plugin-vue": "^8.5.0",
     "eslint-webpack-plugin": "^3.1.1",
     "figlet": "^1.5.2",
@@ -89,7 +89,7 @@
     "postcss": "^8.4.12",
     "postcss-loader": "^6.2.1",
     "postcss-preset-env": "^7.4.3",
-    "prettier": "^2.6.0",
+    "prettier": "^2.8.8",
     "prettier-eslint-cli": "^5.0.1",
     "rimraf": "3.0.2",
     "sass": "^1.63.6",

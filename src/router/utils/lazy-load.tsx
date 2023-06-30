@@ -1,4 +1,4 @@
-import React, { Suspense } from 'react';
+import React, { Suspense } from "react";
 
 /**
  * @description 路由懒加载
@@ -6,7 +6,7 @@ import React, { Suspense } from 'react';
  * @returns element
  */
 export const lazyLoad = (
-  Comp: React.LazyExoticComponent<any>,
+  Comp: React.LazyExoticComponent<any>
 ): React.ReactNode => {
   return (
     <Suspense fallback={null}>

@@ -1,22 +1,22 @@
-const path =require('path');
+const path = require("path");
 const defaultConfig = {
-  publicPath: '/', //开发或生产环境服务的公共基础路径
-  outputDir: 'dist', //生成的生产环境构建文件的目录
+  publicPath: "/", //开发或生产环境服务的公共基础路径
+  outputDir: "dist", //生成的生产环境构建文件的目录
   resolve: {
     alias: {
-      '@': path.resolve(process.cwd(), `src`),
+      "@": path.resolve(process.cwd(), `src`),
     },
-    extensions: ['.ts', '.tsx', '.jsx', '.json', '.js', '.sass', '.scss'],
+    extensions: [".ts", ".tsx", ".jsx", ".json", ".js", ".sass", ".scss"],
   },
   devServer: {
     historyApiFallback: true,
     compress: true,
     port: 3000,
     hot: true,
-    host: '0.0.0.0',
+    host: "0.0.0.0",
     // https: true,
     client: {
-      logging: 'none',
+      logging: "none",
       overlay: {
         errors: true,
         warnings: false,
@@ -41,8 +41,7 @@ const defaultConfig = {
  */
 function defineConfig(config) {
   return Object.assign(defaultConfig, config);
-};
-
+}
 
 module.exports = {
   defineConfig,

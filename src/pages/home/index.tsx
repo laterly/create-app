@@ -1,7 +1,7 @@
-import React from 'react';
-import { useState } from 'react';
-import reactLogo from '../../assets/react.svg';
-import './index.scss';
+import React from "react";
+import { useState } from "react";
+import reactLogo from "../../assets/react.svg";
+import "./index.scss";
 
 const Home: React.FC = () => {
   const [count, setCount] = useState(0);
@@ -15,7 +15,7 @@ const Home: React.FC = () => {
       </div>
       <h1>React</h1>
       <div className="card">
-        <button onClick={() => setCount(count => count + 1)}>
+        <button onClick={() => setCount((count) => count + 1)}>
           count is {count}
         </button>
         <p>

@@ -1,4 +1,4 @@
-import { RouteRecordRaw } from '@/router';
+import { RouteRecordRaw } from "@/router";
 /**
  * @description 递归查询对应的路由
  * @param {String} path 当前访问地址
@@ -7,7 +7,7 @@ import { RouteRecordRaw } from '@/router';
  */
 export const searchRoute = (
   path: string,
-  routes: RouteRecordRaw[] = [],
+  routes: RouteRecordRaw[] = []
 ): RouteRecordRaw => {
   let result: RouteRecordRaw = {};
   for (const item of routes) {

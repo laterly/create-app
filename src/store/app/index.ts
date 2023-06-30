@@ -1,7 +1,7 @@
 /**
  * 存储一些全局的app数据
  */
-import { makeAutoObservable } from 'mobx';
+import { makeAutoObservable } from "mobx";
 export class App {
   pageRouteLevel: null | (() => Promise<void>) = null;
   constructor() {
