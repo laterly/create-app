@@ -1,0 +1,51 @@
+/* 字体布局 */
+/* 超出隐藏 */
+.text-elli {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.text-elli-clamp2 {
+  /*! autoprefixer: ignore next */
+  display: box;
+  /* stylelint-disable-line */
+  display: -webkit-box;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  line-clamp: 2;
+}
+.text-elli-clamp1 {
+  /*! autoprefixer: ignore next */
+  display: box;
+  /* stylelint-disable-line */
+  display: -webkit-box;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 1;
+  line-clamp: 1;
+}
+.text-elli-clamp3 {
+  /*! autoprefixer: ignore next */
+  display: box;
+  /* stylelint-disable-line */
+  display: -webkit-box;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 3;
+  line-clamp: 3;
+}
+.text-center {
+  text-align: center;
+}
+.text-left {
+  text-align: left;
+}
+.text-word-break-space {
+  text-align: justify;
+  word-break: break-all;
+  white-space: break-spaces;
+}
