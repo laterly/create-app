@@ -1,6 +1,6 @@
 const path = require('path');
 
-const { defineConfig } = require('./packages/late-app/src/define');
+const { defineConfig } = require('./packages/late-app/lib/define');
 
 const isDevelopment = process.env.NODE_ENV === 'development';
 
