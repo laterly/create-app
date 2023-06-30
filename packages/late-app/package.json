@@ -15,9 +15,6 @@
     "url": "https://github.com/laterly/latejs-app/issues"
   },
   "homepage": "https://github.com/laterly/latejs-app#readme",
-  "scripts": {
-    "build": "webpack --config ./webpack.config.js"
-  },
   "files": [
     "bin",
     "lib"
