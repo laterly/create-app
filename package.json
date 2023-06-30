@@ -4,11 +4,11 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "preinstall": "npx only-allow pnpm",
     "dev": "late-app dev",
     "build": "late-app build",
     "lint": "late-app lint",
-    "lint:style": "late-app lint:style"
+    "lint:style": "late-app lint:style",
+    "prepare": "git init && husky install"
   },
   "repository": {
     "type": "git",

@@ -51,7 +51,7 @@ program
       // formatter: 'string',
       fix: true,
     })
-      .then((result) => {
+      .then(() => {
         // console.log(result.output);
         console.log('lint:style 执行完成。');
       })
