@@ -1,7 +1,7 @@
 const webpack = require('webpack');
 const path = require('path');
 const rm = require('rimraf');
-const chalk = require('chalk');
+// const chalk = require('chalk');
 const webpackConfig = require('./webpack.prod.config.js');
 
 const startBuild = () => {
@@ -24,17 +24,17 @@ const startBuild = () => {
         );
 
         if (stats.hasErrors()) {
-          console.log(chalk.red('Build failed with errors.\n'));
+          // console.log(chalk.red('Build failed with errors.\n'));
           process.exit(1);
         }
         resolve();
-        console.log(
-          chalk.cyan(
-            `Build complete production in ${
-              stats.endTime - stats.startTime
-            }ms.\n`,
-          ),
-        );
+        // console.log(
+        //   chalk.cyan(
+        //     `Build complete production in ${
+        //       stats.endTime - stats.startTime
+        //     }ms.\n`,
+        //   ),
+        // );
       });
     });
   });

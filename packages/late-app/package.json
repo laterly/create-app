@@ -1,7 +1,7 @@
 {
   "name": "latejs-app",
-  "version": "1.0.0",
-  "description": "cli脚手架",
+  "version": "1.0.2",
+  "description": "latejs-app 工程化创建前端项目",
   "main": "./lib/index.js",
   "bin": {
     "late-app": "./bin/cli.js"
@@ -22,7 +22,7 @@
   "keywords": [
     "latejs-app",
     "late",
-    "cli脚手架"
+    "工程化创建前端项目"
   ],
   "license": "MIT",
   "dependencies": {
