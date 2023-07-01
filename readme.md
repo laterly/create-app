@@ -1,4 +1,4 @@
-# late.js App
+# Late.js App
 
 ## Features
 
