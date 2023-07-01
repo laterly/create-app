@@ -1,7 +1,10 @@
-## late.js App
+# late.js App
 
- -快速构建项目应用，使用最精简的模板创建项目
- -默认 TS 支持，内置构建、ESLint、Prettier
+## Features
+
+- ⚡快速构建项目应用
+- 💪使用最精简的模板创建项目
+- 📦默认 TS 支持，内置构建、ESLint、Prettier
 
 ## 环境准备
 
