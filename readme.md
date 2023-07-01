@@ -1,5 +1,7 @@
 # Late.js App
 
+> Late.js App 支持 React 所需要的项目应用配置，内置采用了Webpack5来构建项目。
+
 ## Features
 
 - ⚡快速构建项目应用
