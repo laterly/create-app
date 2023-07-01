@@ -35,9 +35,9 @@ pnpm -v
 ## 安装
 
 
-latejs 提供了 latejs-cli 工具来创建项目，可以不不用全局安装，使用 npx 按需运行。
+latejs 提供了 latejs-cli 工具来创建项目，cli脚手架项目地址：[`传送门`](https://github.com/laterly/latejs-cli)
 
-创建一个目录为`my-app`的项目：
+可以不不用全局安装，使用 npx 按需运行，创建一个目录为`my-app`的项目：
 
 ```bash
 npx latejs-cli@latest create my-app
@@ -129,6 +129,8 @@ scripts命令：
 
 ```bash
 $ pnpm dev
+
+> late-app dev
 
 App runing at:
 
