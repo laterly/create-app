@@ -1,3 +1,14 @@
 {
-  "extends": "./packages/late-app/lib/ts-config",
+  "extends": "latejs-app/lib/ts-config/index.json",
+  "compilerOptions": {
+    "baseUrl": "./",
+    "paths": {
+      "@": ["src"],
+      "@/*": ["src/*"]
+    }
+  },
+  "paths": {
+    "@/*": ["./src/*"]
+  },
+  "exclude": ["node_modules", "dist"]
 }

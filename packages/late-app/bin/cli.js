@@ -41,7 +41,7 @@ program
     }
   });
 
-  program
+program
   .command("lint:style")
   .description("Starting lint:style...")
   .action(() => {
