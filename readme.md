@@ -1,10 +1,15 @@
-### 快速上手
+## late.js App
+
+ -快速构建项目应用，使用最精简的模板创建项目
+ -默认 TS 支持，内置构建、ESLint、Prettier
 
 ## 环境准备
 
 ### Nodejs
 
-在开始使用前，你需要安装 `Nodejs`，并保证 `Nodejs` 版本不低于 14.17.6，推荐使用 Node.js 16 
+在开始使用前，你需要安装 `Nodejs`，并保证 `Nodejs` 版本不低于 14
+
+推荐使用 Node.js 16 版本
 
 ```bash
 node -v
@@ -13,7 +18,7 @@ node -v
 
 ### pnpm
 
-推荐使用 `pnpm` 来管理依赖：
+推荐使用 `pnpm` 来管理项目的依赖：
 
 ```bash
 npm install -g pnpm@8
@@ -24,17 +29,26 @@ pnpm -v
 
 ## 安装
 
-latejs 提供了 latejs-cli 工具来创建项目，不要全局安装，使用 npx 按需运行。
 
-用新目录来创建项目：
+latejs 提供了 latejs-cli 工具来创建项目，可以不不用全局安装，使用 npx 按需运行。
+
+创建一个目录为`my-app`的项目：
 
 ```bash
 npx latejs-cli@latest create my-app
 ```
 
+全局安装
+
+```bash
+pnpm install latejs-cli -g
+
+late create my-app
+```
+
 ## 初始化项目
 
-latejs-cli 会提供一个React-Ts模板和Vue3-Ts模板，根据选项初始化项目：
+latejs-cli 目前会提供一个React-Ts模板和Vue3-Ts模板，可以根据选项初始化项目：
 
 ```bash
 ✔ waiting fetch template
@@ -57,7 +71,7 @@ Successfully created project my-app
   pnpm lint:style
 ```
 
-项目结构如下：
+创建的项目结构如下：
 
 ```
 .
@@ -106,7 +120,7 @@ scripts命令：
 
 ## 启动项目
 
-在项目中执行 pnpm dev 即可启动项目：
+执行 pnpm dev 即可启动项目：
 
 ```bash
 $ pnpm dev
@@ -123,7 +137,7 @@ webpack compiled successfully
 No errors found.
 ```
 
-在浏览器中打开 http://localhost:3000/，可以看到页面内容。
+在浏览器中打开 http://localhost:3000/
 
 ## 使用配置
 
