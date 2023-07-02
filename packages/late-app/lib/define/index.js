@@ -40,9 +40,19 @@ const defaultConfig = {
  * @param config.env {Object} env的配置
  */
 function defineConfig(config) {
-  return {
-    ...defaultConfig,
-  };
+  const merged = [defaultConfig, config].reduce((result, current) => {
+    Object.entries(current).forEach(([key, value]) => {
+      if (!result.hasOwnProperty(key)) {
+        result[key] = value;
+      } else if (typeof value === 'object' && typeof result[key] === 'object') {
+        result[key] = { ...result[key], ...value };
+      }
+    });
+    return result;
+  }, {});
+
+  return merged;
+  
 }
 
 module.exports = {

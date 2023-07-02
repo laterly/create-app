@@ -6,7 +6,7 @@ const os = require('os');
 process.env.NODE_ENV = 'development';
 const baseConfig = require('./webpack.base.config');
 const profile = require(path.resolve(process.cwd(), `late.config`));
-console.log('profile',profile.devServer);
+
 const config = {
   mode: 'development',
   output: {
