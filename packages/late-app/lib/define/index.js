@@ -40,7 +40,9 @@ const defaultConfig = {
  * @param config.env {Object} env的配置
  */
 function defineConfig(config) {
-  return Object.assign(defaultConfig, config);
+  return {
+    ...defaultConfig,
+  };
 }
 
 module.exports = {

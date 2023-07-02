@@ -5,5 +5,4 @@ import App from "./app";
 import "./assets/style";
 const container = document.getElementById("app");
 const root = createRoot(container!);
-console.log("apappppappap");
 root.render(<App />);

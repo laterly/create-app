@@ -5,7 +5,6 @@ import "./index.scss";
 
 const Home: React.FC = () => {
   const [count, setCount] = useState(0);
-
   return (
     <>
       <div>

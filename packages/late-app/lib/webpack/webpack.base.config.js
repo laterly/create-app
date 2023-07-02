@@ -3,6 +3,7 @@ const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const NodePolyfillPlugin = require('node-polyfill-webpack-plugin');
 const Webpackbar = require('webpackbar');
+const Happypack = require('happypack');
 const { commonCssLoader } = require('./utils/index');
 const profile = require(path.resolve(process.cwd(), `late.config`));
 const env = process.env.NODE_ENV;
@@ -18,17 +19,8 @@ module.exports = {
       {
         test: /\.(js|jsx|tsx|ts)$/,
         use: {
-          loader: 'babel-loader',
-          options: {
-            presets: [
-              '@babel/preset-react',
-              '@babel/preset-typescript',
-            ],
-            plugins: [
-              '@babel/plugin-proposal-object-rest-spread',
-              '@babel/plugin-transform-spread',
-            ],
-          },
+          loader: 'happypack/loader',
+          
         },
       },
       {
@@ -123,13 +115,19 @@ module.exports = {
       basic: false, // 默认true，启用一个简单的日志报告器
       profile: false, // 默认false，启用探查器。
     }),
-    // new Happypack({
-    //   loaders: [
-    //     {
-    //       loader: 'babel-loader'
-    //     },
-    //   ],
-    // }),
+    new Happypack({
+      loaders: [
+        {
+          loader: 'babel-loader',
+          options: {
+            presets: [
+              '@babel/preset-react',
+              '@babel/preset-typescript',
+            ]
+          },
+        },
+      ],
+    }),
     new webpack.DefinePlugin({
       'process.env': JSON.stringify(profile.env),
     }),
