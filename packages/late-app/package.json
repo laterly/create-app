@@ -1,6 +1,6 @@
 {
   "name": "latejs-app",
-  "version": "1.0.9",
+  "version": "1.1.0",
   "description": "latejs-app 工程化创建前端项目",
   "main": "./dist/webpack/index.js",
   "bin": {
