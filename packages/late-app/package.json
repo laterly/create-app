@@ -1,6 +1,6 @@
 {
   "name": "latejs-app",
-  "version": "1.0.8",
+  "version": "1.0.9",
   "description": "latejs-app 工程化创建前端项目",
   "main": "./lib/index.js",
   "bin": {
