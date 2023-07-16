@@ -14,7 +14,7 @@ const defaultConfig = {
     port: 3000,
     hot: true,
     host: "0.0.0.0",
-    // https: true,
+    open: false,
     client: {
       logging: "none",
       overlay: {

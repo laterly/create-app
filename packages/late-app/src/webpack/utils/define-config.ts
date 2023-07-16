@@ -1,4 +1,5 @@
-import { resolvePath } from "./path-config";
+// import { resolvePath } from "./path-config";
+import path from "path";
 interface DefaultConfig {
   publicPath?: string;
   outputDir?: string;
@@ -26,10 +27,10 @@ interface DefaultConfig {
 }
 const defaultConfig: DefaultConfig = {
   publicPath: "/",
-  outputDir: "dist",
+  outputDir: path.resolve(process.cwd(), `dist`),
   resolve: {
     alias: {
-      "@": resolvePath("src"),
+      "@": path.resolve(process.cwd(), `src`),
     },
     extensions: [".ts", ".tsx", ".jsx", ".json", ".js", ".sass", ".scss"],
   },

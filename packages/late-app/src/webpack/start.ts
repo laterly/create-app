@@ -1,16 +1,24 @@
 import Webpack, { type Configuration } from "webpack";
-import WebpackDevServer from "webpack-dev-server";
+import path from "path";
+import WebpackDevServer, {
+  type Configuration as DevServerConfiguration,
+} from "webpack-dev-server";
 import webpackConfig from "./dev.config";
 import { clearConsole, getPort, printInstructions } from "./utils/index";
+const profile = require(path.resolve(process.cwd(), `late.config`));
 const compiler = Webpack(webpackConfig as Configuration);
-const devServerOptions = { ...(webpackConfig as Configuration).devServer };
+
+const devServerOptions: DevServerConfiguration = {
+  ...profile?.devServer,
+};
+
 const runServer = async () => {
   try {
     const port = await getPort({
-      port: Number(devServerOptions.port),
+      port: Number(devServerOptions),
       stopPort: 9999,
     });
-    //@ts-ignore
+
     process.env.PORT = port?.toString();
     devServerOptions.port = port;
     const server = new WebpackDevServer(devServerOptions, compiler);
@@ -34,7 +42,7 @@ compiler.hooks.invalid.tap("invalid", () => {
 });
 
 compiler.hooks.done.tap("done", async () => {
-  // clearConsole();
+  clearConsole();
   printInstructions();
 });
 

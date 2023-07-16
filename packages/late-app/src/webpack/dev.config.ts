@@ -17,9 +17,10 @@ const config: Configuration = {
     publicPath: profile.publicPath,
   },
   devtool: "eval-source-map",
-  devServer: {
-    ...profile.devServer,
-  },
+  // ignoreWarnings: [/default\-exporting/], // 过滤json命名导出警告
+  // infrastructureLogging: {
+  //   level: "error",
+  // },
   cache: {
     type: "memory",
   },

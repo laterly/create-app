@@ -1,0 +1,13 @@
+.cache
+dist
+node_modules
+scripts
+src
+static
+tsconfig.json
+yarn-error.log
+yarn.lock
+.editorconfig
+.eslintignore
+.eslintrc.js
+*.js.map

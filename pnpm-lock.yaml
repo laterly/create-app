@@ -297,6 +297,9 @@ importers:
       webpack-dev-server:
         specifier: 4.11.1
         version: registry.npmmirror.com/webpack-dev-server@4.11.1(webpack-cli@4.10.0)(webpack@5.88.1)
+      webpack-log:
+        specifier: ^3.0.2
+        version: registry.npmmirror.com/webpack-log@3.0.2
       webpack-merge:
         specifier: ^5.8.0
         version: registry.npmmirror.com/webpack-merge@5.9.0
@@ -9016,6 +9019,13 @@ packages:
     engines: {node: '>= 0.6.0'}
     dev: false
 
+  registry.npmmirror.com/loglevelnext@3.0.1:
+    resolution: {integrity: sha512-JpjaJhIN1reaSb26SIxDGtE0uc67gPl19OMVHrr+Ggt6b/Vy60jmCtKgQBrygAH0bhRA2nkxgDvM+8QvR8r0YA==, registry: http://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/loglevelnext/-/loglevelnext-3.0.1.tgz}
+    name: loglevelnext
+    version: 3.0.1
+    engines: {node: '>= 6.14.4'}
+    dev: false
+
   registry.npmmirror.com/longest@2.0.1:
     resolution: {integrity: sha512-Ajzxb8CM6WAnFjgiloPsI3bF+WCxcvhdIG3KNA2KN962+tdBsHcuQ4k4qX/EcS/2CRkcc0iAkR956Nib6aXU/Q==, registry: http://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/longest/-/longest-2.0.1.tgz}
     name: longest
@@ -9673,6 +9683,12 @@ packages:
     resolution: {integrity: sha512-2ZTgtl0nJsO0KQCjEpxcIr5D+Yv90plTitZt9JBfQvVJDS5seMl3FOvsh3+9CoYWXf/1l5OaZzzF6nDm4cagaQ==, registry: http://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/nan/-/nan-2.17.0.tgz}
     name: nan
     version: 2.17.0
+    dev: false
+
+  registry.npmmirror.com/nanoid@2.1.11:
+    resolution: {integrity: sha512-s/snB+WGm6uwi0WjsZdaVcuf3KJXlfGl2LcxgwkEwJF0D/BWzVWAZW/XY4bFaiR7s0Jk3FPvlnepg1H1b1UwlA==, registry: http://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/nanoid/-/nanoid-2.1.11.tgz}
+    name: nanoid
+    version: 2.1.11
     dev: false
 
   registry.npmmirror.com/nanoid@3.3.6:
@@ -14069,6 +14085,17 @@ packages:
       - debug
       - supports-color
       - utf-8-validate
+    dev: false
+
+  registry.npmmirror.com/webpack-log@3.0.2:
+    resolution: {integrity: sha512-ijm2zgqTY2omtlxRNrtDqxAQOrfAGMxWg9fQB/kuFSeZjx/OkYnfYLqsjf/JkrWOHINMzqxaJDXaog6Mx9KaHg==, registry: http://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/webpack-log/-/webpack-log-3.0.2.tgz}
+    name: webpack-log
+    version: 3.0.2
+    engines: {node: '>= 8.0.0'}
+    dependencies:
+      chalk: registry.npmmirror.com/chalk@2.4.2
+      loglevelnext: registry.npmmirror.com/loglevelnext@3.0.1
+      nanoid: registry.npmmirror.com/nanoid@2.1.11
     dev: false
 
   registry.npmmirror.com/webpack-merge@5.9.0:
