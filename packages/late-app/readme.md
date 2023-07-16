@@ -1,4 +1,4 @@
-# Late.js App
+# Create App
 
 <sup>
     <a href="https://www.npmjs.com/package/latejs-app">
@@ -41,7 +41,7 @@ pnpm -v
 ## 安装
 
 
-latejs 提供了 latejs-cli 工具来创建项目，cli脚手架项目地址：[`传送门`](https://github.com/laterly/latejs-cli)
+create-app 提供了 latejs-cli 工具来创建项目，cli脚手架项目地址：[`传送门`](https://github.com/laterly/latejs-cli)
 
 可以不用全局安装，使用 npx 按需运行，创建一个目录为`my-app`的项目：
 
