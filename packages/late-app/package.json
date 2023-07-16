@@ -2,13 +2,17 @@
   "name": "latejs-app",
   "version": "1.0.9",
   "description": "latejs-app 工程化创建前端项目",
-  "main": "./lib/index.js",
+  "main": "./dist/webpack/index.js",
   "bin": {
     "late-app": "./bin/cli.js"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/laterly/latejs-app.git"
+  },
+  "scripts": {
+    "dev": "tsc --build ./tsconfig.json -w",
+    "build": "tsc --build ./tsconfig.json"
   },
   "author": "",
   "bugs": {
@@ -17,7 +21,8 @@
   "homepage": "https://github.com/laterly/latejs-app#readme",
   "files": [
     "bin",
-    "lib"
+    "lib",
+    "dist"
   ],
   "keywords": [
     "latejs-app",
@@ -38,8 +43,16 @@
     "@commitlint/cli": "^16.3.0",
     "@commitlint/config-conventional": "^16.2.4",
     "@types/dompurify": "^2.3.4",
-    "@types/node": "^18.0.6",
+    "@types/fs-extra": "^11.0.1",
+    "@types/happypack": "^5.0.2",
+    "@types/inquirer": "^9.0.3",
+    "@types/ip": "^1.1.0",
+    "@types/node": "^18.16.18",
+    "@types/webpack": "^5.28.1",
+    "@types/webpack-bundle-analyzer": "^4.6.0",
+    "@types/webpack-dev-server": "^4.7.2",
     "@types/webpack-env": "^1.18.0",
+    "@types/webpack-merge": "^5.0.0",
     "@typescript-eslint/eslint-plugin": "^5.16.0",
     "@typescript-eslint/parser": "^5.16.0",
     "axios": "^0.26.1",
@@ -88,7 +101,6 @@
     "postcss-preset-env": "^7.4.3",
     "prettier": "^2.8.8",
     "prettier-eslint-cli": "^5.0.1",
-    "rimraf": "3.0.2",
     "sass": "^1.63.6",
     "sass-loader": "^13.3.2",
     "shelljs": "^0.8.5",
@@ -99,9 +111,9 @@
     "stylelint-config-standard-scss": "^5.0.0",
     "stylelint-order": "^5.0.0",
     "terser-webpack-plugin": "^5.3.1",
-    "typescript": "^4.6.2",
+    "typescript": "^4.9.5",
     "url-loader": "^4.1.1",
-    "webpack": "^5.73.0",
+    "webpack": "^5.81.0",
     "webpack-bundle-analyzer": "^4.5.0",
     "webpack-cli": "^4.10.0",
     "webpack-dev-server": "4.11.1",

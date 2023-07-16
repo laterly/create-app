@@ -22,6 +22,13 @@ const defaultConfig = {
         warnings: false,
       },
     },
+    devMiddleware: {
+      stats: {
+        all: false,
+        errors: true,
+        warnings: true,
+      },
+    },
   },
   env: {},
   lessOptions: {},
@@ -44,7 +51,7 @@ function defineConfig(config) {
     Object.entries(current).forEach(([key, value]) => {
       if (!result.hasOwnProperty(key)) {
         result[key] = value;
-      } else if (typeof value === 'object' && typeof result[key] === 'object') {
+      } else if (typeof value === "object" && typeof result[key] === "object") {
         result[key] = { ...result[key], ...value };
       }
     });
@@ -52,7 +59,6 @@ function defineConfig(config) {
   }, {});
 
   return merged;
-  
 }
 
 module.exports = {

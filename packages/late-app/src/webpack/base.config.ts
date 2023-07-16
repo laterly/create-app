@@ -1,26 +1,26 @@
-const webpack = require('webpack');
-const path = require('path');
-const HtmlWebpackPlugin = require('html-webpack-plugin');
-const NodePolyfillPlugin = require('node-polyfill-webpack-plugin');
-const Webpackbar = require('webpackbar');
-const Happypack = require('happypack');
-const { commonCssLoader } = require('./utils/index');
+import webpack from "webpack";
+import path from "path";
+import HtmlWebpackPlugin from "html-webpack-plugin";
+import NodePolyfillPlugin from "node-polyfill-webpack-plugin";
+import Webpackbar from "webpackbar";
+import Happypack from "happypack";
+import { commonCssLoader } from "./utils/index";
 const profile = require(path.resolve(process.cwd(), `late.config`));
 const env = process.env.NODE_ENV;
-module.exports = {
+
+export default {
   entry: {
     app: [path.resolve(process.cwd(), `src/main.tsx`)],
   },
-  target: 'web',
+  target: "web",
   resolve: profile.resolve || {},
-  stats: 'errors-warnings',
+  stats: "errors-warnings",
   module: {
     rules: [
       {
         test: /\.(js|jsx|tsx|ts)$/,
         use: {
-          loader: 'happypack/loader',
-          
+          loader: "happypack/loader",
         },
       },
       {
@@ -30,7 +30,7 @@ module.exports = {
             use: [
               ...commonCssLoader,
               {
-                loader: 'sass-loader',
+                loader: "sass-loader",
                 options: profile.sass || {},
               },
             ],
@@ -40,7 +40,7 @@ module.exports = {
             use: [
               ...commonCssLoader,
               {
-                loader: 'less-loader',
+                loader: "less-loader",
                 options: profile.less,
               },
             ],
@@ -51,18 +51,18 @@ module.exports = {
           },
           {
             test: /\.html$/,
-            loader: 'html-loader',
+            loader: "html-loader",
             options: {
               minimize: false,
             },
           },
           {
             test: /\.json$/i,
-            type: 'asset/resource',
+            type: "asset/resource",
           },
           {
             test: /\.(png|jpeg|jpg|gif|webm|svg)$/,
-            type: 'asset',
+            type: "asset",
             parser: {
               dataUrlCondition: {
                 maxSize: 10 * 1024,
@@ -70,14 +70,14 @@ module.exports = {
             },
             generator: {
               filename:
-                env == 'development'
+                env == "development"
                   ? `images/[name].[ext]`
                   : `images/[name][contenthash:8].[ext]`,
             },
           },
           {
             test: /\.(mp4|webm|ogg|mp3|wav|flac|aa)$/,
-            type: 'asset',
+            type: "asset",
             parser: {
               dataUrlCondition: {
                 maxSize: 10 * 1024,
@@ -85,14 +85,14 @@ module.exports = {
             },
             generator: {
               filename:
-                env == 'development'
+                env == "development"
                   ? `media/[name].[ext]`
                   : `media/[name][contenthash:8].[ext]`,
             },
           },
           {
             test: /\.(woff2?|eot|ttf|otf)(\?.*)?$/,
-            type: 'asset',
+            type: "asset",
             parser: {
               dataUrlCondition: {
                 maxSize: 10 * 1024,
@@ -100,7 +100,7 @@ module.exports = {
             },
             generator: {
               filename:
-                env == 'development'
+                env == "development"
                   ? `fonts/[name].[ext]`
                   : `fonts/[name][contenthash:8].[ext]`,
             },
@@ -112,24 +112,20 @@ module.exports = {
   },
   plugins: [
     new Webpackbar({
-      basic: false, // 默认true，启用一个简单的日志报告器
-      profile: false, // 默认false，启用探查器。
+      name: "Client",
     }),
     new Happypack({
       loaders: [
         {
-          loader: 'babel-loader',
+          loader: "babel-loader",
           options: {
-            presets: [
-              '@babel/preset-react',
-              '@babel/preset-typescript',
-            ]
+            presets: ["@babel/preset-react", "@babel/preset-typescript"],
           },
         },
       ],
     }),
     new webpack.DefinePlugin({
-      'process.env': JSON.stringify(profile.env),
+      "process.env": JSON.stringify(profile.env),
     }),
     // 忽略 moment 下的 /locale 目录
     new webpack.IgnorePlugin({
@@ -138,7 +134,7 @@ module.exports = {
     }),
     new NodePolyfillPlugin(),
     new HtmlWebpackPlugin({
-      filename: 'index.html',
+      filename: "index.html",
       template: path.resolve(process.cwd(), `public/index.html`),
       inject: true,
       minify: true,

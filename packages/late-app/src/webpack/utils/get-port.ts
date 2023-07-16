@@ -1,5 +1,10 @@
-const portfinder = require('portfinder');
-const getPort = ({ port, stopPort } = {}) => {
+import portfinder from "portfinder";
+
+interface PortType {
+  port?: number;
+  stopPort?: number;
+}
+const getPort = ({ port, stopPort }: PortType = {}): Promise<number> => {
   return new Promise((resolve, reject) => {
     portfinder.getPort(
       {
@@ -12,10 +17,8 @@ const getPort = ({ port, stopPort } = {}) => {
           return;
         }
         resolve(port);
-      },
+      }
     );
   });
 };
-module.exports = {
-  getPort,
-};
+export { getPort };

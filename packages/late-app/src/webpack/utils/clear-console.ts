@@ -6,6 +6,6 @@ const clearConsole = () => {
   }
 };
 
-module.exports = {
+export {
   clearConsole,
 };

@@ -7,8 +7,7 @@
     "dev": "late-app dev",
     "build": "late-app build",
     "lint": "late-app lint",
-    "lint:style": "late-app lint:style",
-    "prepare": "git init && husky install"
+    "lint:style": "late-app lint:style"
   },
   "repository": {
     "type": "git",

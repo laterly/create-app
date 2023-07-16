@@ -1,3 +1,3 @@
 module.exports = {
-  extends: [require.resolve("./packages/late-app/lib/stylelint")],
+  extends: [require.resolve("../packages/late-app/lib/stylelint")],
 };
