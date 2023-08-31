@@ -40,7 +40,6 @@ pnpm -v
 
 ## 安装
 
-
 create-app 提供了 latejs-cli 工具来创建项目，cli脚手架项目地址：[`传送门`](https://github.com/laterly/latejs-cli)
 
 可以不用全局安装，使用 npx 按需运行，创建一个目录为`my-app`的项目：
@@ -52,7 +51,7 @@ npx latejs-cli@latest create my-app
 全局安装
 
 ```bash
-pnpm install latejs-cli -g
+npm install latejs-cli -g
 
 late create my-app
 ```
@@ -150,7 +149,7 @@ webpack compiled successfully
 No errors found.
 ```
 
-在浏览器中打开 http://localhost:3000/
+在浏览器中打开 <http://localhost:3000/>
 
 ## 使用配置
 
